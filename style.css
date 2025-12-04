@@ -139,3 +139,69 @@ footer {
     margin-top: 40px;
     background: #efefef;
 }
+nav {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 15px;
+    background: #f4f4f4;
+}
+nav a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 600;
+}
+
+.hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 40px 20px;
+    background: #eef4ff;
+    border-radius: 8px;
+}
+.image-row {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+.image-row figure {
+    width: 250px;
+    text-align: center;
+}
+section.stage {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+    align-items: start;
+    margin: 40px 0;
+}
+#scrollTopBtn {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background: dodgerblue;
+    border: none;
+    cursor: pointer;
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background: #222;
+    color: white;
+}
+footer img {
+    width: 40px;
+}
+
+
