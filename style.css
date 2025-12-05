@@ -1,8 +1,13 @@
-table {
-    align-self: start;
+/* ========================
+   GLOBAL STYLES
+======================== */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
 }
 
-/* HEADINGS */
 h1 {
     font-weight: 500;
     font-size: 48px;
@@ -17,17 +22,16 @@ h1 {
 
 h2 {
     font-weight: 400;
-    font-size: 48px;
+    font-size: 42px;
     text-align: center;
     margin-top: 40px;
 }
 
-/* PARAGRAPHS */
 div p {
     font-size: 32px;
     text-align: justify;
     background-color: bisque;
-    border: 6px solid #ccc;
+    border: 6px solid transparent;
 }
 
 p {
@@ -35,39 +39,51 @@ p {
     padding: 8px;
 }
 
-/* NAVIGATION */
+strong {
+    font-size: 20px;
+}
+
+/* ========================
+   FLEXBOX: NAVIGATION
+======================== */
+nav {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 15px;
+    background: #f4f4f4;
+}
+
 nav a {
-   color: cadetblue;
-   text-decoration: none;
-   padding: 5px 12px;
-   border-radius: 6px;
-   font-weight: 600;
+    text-decoration: none;
+    color: #333;
+    font-weight: 600;
+    padding: 5px 12px;
+    border-radius: 6px;
 }
 
 nav a:hover {
     background: #dfefff;
 }
 
-/* IMAGES */
+/* ========================
+   IMAGES
+======================== */
 img {
     max-width: 550px;
-    display: block;
-    border-radius: 8px;
-    margin: 20px auto;
     width: 100%;
+    display: block;
+    margin: 20px auto;
+    border-radius: 8px;
 }
 
-/* TEXT UTILITIES */
 .blue-text {
     color: rgb(146, 146, 232);
     font-weight: 600;
 }
 
-strong {
-    font-size: 20px;
-}
-
-/* FIGURES */
+/* Center image captions */
 figure {
     text-align: center;
     margin: 30px 0;
@@ -78,11 +94,40 @@ figcaption {
     color: #555;
 }
 
-/* TABLE */
+/* ========================
+   GRID SYSTEM: STAGES
+======================== */
+section.stage {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+    align-items: start;
+    margin: 40px 0;
+}
+
+/* ========================
+   FLEXBOX IMAGE ROW
+======================== */
+.image-row {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+.image-row figure {
+    width: 250px;
+}
+
+/* ========================
+   TABLE STYLING
+======================== */
 table {
     font-size: 16px;
     width: 100%;
     max-width: 900px;
+    margin: 20px auto;
     border-collapse: collapse;
 }
 
@@ -104,7 +149,9 @@ table th {
     font-weight: 700;
 }
 
-/* FORM */
+/* ========================
+   FORM STYLES
+======================== */
 form {
     background: #ffffff;
     padding: 25px;
@@ -140,7 +187,26 @@ input[type="submit"]:hover {
     background: #6955de;
 }
 
-/* FOOTER */
+/* ========================
+   POSITION SYSTEM: SCROLL BUTTON
+======================== */
+#scrollTopBtn {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background: dodgerblue;
+    border: none;
+    cursor: pointer;
+    color: white;
+    font-size: 20px;
+}
+
+/* ========================
+   FOOTER
+======================== */
 footer {
     display: flex;
     flex-direction: column;
@@ -152,58 +218,4 @@ footer {
 
 footer img {
     width: 40px;
-}
-
-/* LAYOUT */
-nav {
-    display: flex;
-    gap: 20px;
-    justify-content: center;
-    flex-wrap: wrap;
-    padding: 15px;
-    background: #f4f4f4;
-}
-
-.hero {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    padding: 40px 20px;
-    background: #eef4ff;
-    border-radius: 8px;
-}
-
-.image-row {
-    display: flex;
-    gap: 20px;
-    justify-content: center;
-    align-items: flex-start;
-    flex-wrap: wrap;
-}
-
-.image-row figure {
-    width: 250px;
-    text-align: center;
-}
-
-section.stage {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 25px;
-    align-items: start;
-    margin: 40px 0;
-}
-
-/* SCROLL BUTTON */
-#scrollTopBtn {
-    position: fixed;
-    bottom: 25px;
-    right: 25px;
-    width: 45px;
-    height: 45px;
-    border-radius: 50%;
-    background: dodgerblue;
-    border: none;
-    cursor: pointer;
 }
