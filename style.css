@@ -4,7 +4,7 @@
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
-    margin: 0;
+    margin: 5px;
     padding: 0;
 }
 
@@ -218,4 +218,64 @@ footer {
 
 footer img {
     width: 40px;
+}
+
+/* ========================
+   RESPONSIVE MEDIA QUERIES
+======================== */
+@media screen and (max-width: 1024px) {
+    section.stage {
+        grid-template-columns: 1fr;
+    }
+
+    .image-row figure {
+        width: 45%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    h1 {
+        font-size: 36px;
+    }
+
+    h2 {
+        font-size: 32px;
+    }
+
+    div p {
+        font-size: 24px;
+    }
+
+    .image-row figure {
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    nav {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+
+    h2 {
+        font-size: 24px;
+    }
+
+    div p {
+        font-size: 20px;
+    }
+
+    .image-row figure {
+        width: 100%;
+    }
+
+    table th,
+    table td {
+        font-size: 14px;
+        padding: 8px;
+    }
 }
