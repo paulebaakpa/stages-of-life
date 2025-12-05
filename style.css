@@ -118,6 +118,7 @@ section.stage {
 
 .image-row figure {
     width: 250px;
+    flex: 1;
 }
 
 /* ========================
@@ -153,7 +154,7 @@ table th {
    FORM STYLES
 ======================== */
 form {
-    background: #ffffff;
+    background: wheat;
     padding: 25px;
     max-width: 600px;
     margin: 40px auto;
@@ -173,8 +174,8 @@ textarea {
     font-size: 16px;
 }
 
-input[type="submit"] {
-    background: #5c6bff;
+input[type="submit"]:hover {
+    background: #a7aeed;
     color: white;
     border: none;
     padding: 12px 20px;
@@ -183,26 +184,14 @@ input[type="submit"] {
     cursor: pointer;
 }
 
-input[type="submit"]:hover {
-    background: #6955de;
+input[type="submir"]:visited{
+    color: #555;
+}
+input[type="submit"]:active {
+    color: #482bf0;
 }
 
-/* ========================
-   POSITION SYSTEM: SCROLL BUTTON
-======================== */
-#scrollTopBtn {
-    position: fixed;
-    bottom: 25px;
-    right: 25px;
-    width: 45px;
-    height: 45px;
-    border-radius: 50%;
-    background: dodgerblue;
-    border: none;
-    cursor: pointer;
-    color: white;
-    font-size: 20px;
-}
+
 
 /* ========================
    FOOTER
@@ -285,7 +274,7 @@ footer img {
     display: flex;
     gap: 20px;
     list-style: none;
-    margin: 0;
+    margin: 5;
     padding: 0;
 }
 
@@ -307,7 +296,7 @@ footer img {
 ====================== */
 @media screen and (max-width: 768px) {
     .nav-links {
-        display: none;          /* hide by default */
+        display: flex;          /* hide by default */
         flex-direction: column; /* vertical dropdown */
         position: absolute;
         top: 60px;
