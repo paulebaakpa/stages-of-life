@@ -280,31 +280,40 @@ footer img {
     }
 }
 
-/* Hamburger menu hidden on desktop */
+/* Desktop nav */
+.nav-links {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 600;
+}
+
+/* Hamburger hidden on desktop */
 .hamburger {
     display: none;
     font-size: 28px;
     cursor: pointer;
 }
 
-/* Nav links container */
-.nav-links {
-    display: flex;
-    gap: 20px;
-}
-
-/* ========================
-   RESPONSIVE NAV
-======================== */
+/* ======================
+   MOBILE NAV
+====================== */
 @media screen and (max-width: 768px) {
     .nav-links {
-        display: none; /* hidden initially */
-        flex-direction: column;
-        width: 100%;
-        background: #f4f4f4;
+        display: none;          /* hide by default */
+        flex-direction: column; /* vertical dropdown */
         position: absolute;
-        top: 60px; /* below navbar */
+        top: 60px;
         left: 0;
+        width: 100%;
+        background-color: #f4f4f4;
         padding: 10px 0;
         border-top: 1px solid #ccc;
     }
@@ -313,13 +322,20 @@ footer img {
         display: flex;
     }
 
+    .nav-links li {
+        text-align: center;
+        margin: 10px 0;
+    }
+
     .hamburger {
         display: block;
     }
 
     nav {
         position: relative;
-        justify-content: space-between;
         padding: 10px 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
     }
 }
