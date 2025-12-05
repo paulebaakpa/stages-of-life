@@ -279,3 +279,47 @@ footer img {
         padding: 8px;
     }
 }
+
+/* Hamburger menu hidden on desktop */
+.hamburger {
+    display: none;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+/* Nav links container */
+.nav-links {
+    display: flex;
+    gap: 20px;
+}
+
+/* ========================
+   RESPONSIVE NAV
+======================== */
+@media screen and (max-width: 768px) {
+    .nav-links {
+        display: none; /* hidden initially */
+        flex-direction: column;
+        width: 100%;
+        background: #f4f4f4;
+        position: absolute;
+        top: 60px; /* below navbar */
+        left: 0;
+        padding: 10px 0;
+        border-top: 1px solid #ccc;
+    }
+
+    .nav-links.show {
+        display: flex;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    nav {
+        position: relative;
+        justify-content: space-between;
+        padding: 10px 20px;
+    }
+}
